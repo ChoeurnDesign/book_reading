@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;0,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --btn-bg-primary: #3a92f7;
+    --btn-border-primary: #3a92f7;
+    --btn-font-family: "Montserrat", sans-serif;
+    --body-font-family: "Lato", sans-serif;
+    --btn-bg-dark: #000;
+    --star-raing-color: #3a92f7;
+
+    --search-bg-light: #f0f0f0;
+    --search-placeholder-color: #888;
+    --search-focus-glow: rgba(58, 146, 247, 0.15);
+}
+
+body{
+    font-family: var(--body-font-family);
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: normal;
+}
+
+p {
+    font-weight: normal;
+}
+
+.header{
+    background-color: var(--btn-bg-primary);
+}
+
+.star-rating {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    justify-content: flex-start;
+}
+
+.back-stars {
+    display: flex;
+    color: #ccc;
+    position: relative;
+}
+
+.front-stars {
+    display: flex;
+    color: var(--star-raing-color);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transition: all .5s;
+}
+
+.percent {
+    color: #bb5252;
+    font-size: 1.5em;
+}
+
+.btn-primary{
+    font-family: var(--btn-font-family);
+    background-color: var(--btn-bg-primary);
+    border-color: var(--btn-border-primary);
+}
+.btn-primary:hover{
+    background-color: var(--btn-bg-dark);
+    border-color: var(--btn-bg-dark);
+}
+
+.heading{
+    font-size: 18px;
+    font-family: var(--body-font-family);
+}
+
+.heading a{
+    font-size: 18px;
+    font-family: var(--body-font-family);
+    color: #000;
+    text-decoration: none;
+}
+
+.navigation a{
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.sidebar .nav li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--btn-bg-dark);
+}
+
+.sidebar .nav li{
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.sidebar .nav li:last-child{
+    border-bottom: none;
+}
+
+.card-header{
+    background-color: var(--btn-bg-primary);
+    font-size: 18px;
+    color: var(--white);
+}
+
+.content{
+    font-size: 16px;
+    font-family: var(--btn-font-family);
+    font-weight: 500;
+}
+
+.card {
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Search bar wrapper card adjustments */
+.card.shadow-lg.border-0.mb-4.rounded-3 {
+    box-shadow: none !important;
+    border: none !important;
+    background-color: transparent !important;
+}
+
+/* Search Input Group */
+.input-group {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--search-bg-light);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #a0a0a0;
+    transition: all 0.3s ease;
+}
+
+.input-group:focus-within {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08), 0 0 0 0.2rem var(--search-focus-glow);
+    background-color: var(--white);
+    border-color: var(--btn-border-primary);
+}
+
+/* Input Field within search bar */
+.input-group .form-control.rounded-start-3 {
+    height: calc(2.8rem + 2px);
+    padding: 0.75rem 1.25rem;
+    font-size: 1.1rem;
+    color: #333;
+    background-color: transparent;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 10px 0 0 10px !important;
+}
+
+.input-group .form-control.rounded-start-3::placeholder {
+    color: var(--search-placeholder-color);
+    opacity: 1;
+}
+
+.input-group .form-control.rounded-start-3:focus {
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Search Button */
+.input-group .btn.rounded-end-3 {
+    background-color: var(--btn-bg-primary);
+    border-color: var(--btn-border-primary);
+    padding: 0.75rem 1rem;
+    border-radius: 0 10px 10px 0 !important;
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.input-group .btn.rounded-end-3:hover {
+    background-color: var(--btn-bg-dark);
+    border-color: var(--btn-bg-dark);
+}
+
+.input-group .btn.rounded-end-3 i {
+    color: var(--white);
+}
+
+/* Other form-control styles */
+.form-control {
+    border: 1px solid #ced4da;
+    background-color: #fcfcfc;
+    color: #343a40;
+    padding: 0.3rem 0.75rem;
+    height: auto;
+}
+
+.form-label, .col-form-label {
+    color: #495057;
+}
+
+.form-control:focus {
+    border-color: var(--btn-bg-primary);
+    box-shadow: 0 0 0 0.25rem rgba(58, 146, 247, 0.25);
+}
+
+.nav-pills .nav-link {
+    padding: 0.25rem 0.75rem;
+    transition: background 0.2s, color 0.2s;
+    /* Ensure nav links are not bold */
+    font-weight: normal !important;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #cdcdcd !important;
+    color: #0d6efd !important;
+}
+
+/* Clear Search Link */
+a.text-dark.text-decoration-none.fw-bold {
+    color: #6c757d !important;
+    transition: color 0.2s ease;
+}
+
+a.text-dark.text-decoration-none.fw-bold:hover {
+    color: #343a40 !important;
+}
+
+/* Book item cards */
+.row.mt-4 .card.shadow-lg {
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.row.mt-4 .card.shadow-lg:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-img-top.rounded-top {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+/* Star Rating */
+.rating-text.theme-font.theme-yellow {
+    color: var(--star-raing-color) !important;
+}
