@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Book;
 use App\Models\Category;
@@ -22,7 +23,7 @@ class BookSeeder extends Seeder
         // Ensure categories exist before attaching them to books
         $fiction = Category::where('name', 'Fiction')->first();
         $thriller = Category::where('name', 'Thriller')->first();
-        $nonfiction = Category::where('name', 'Non Fiction')->first();
+        $nonfiction = Category::where('name', 'Non-Fiction')->first();
         $category = Category::where('name', 'Fantasy')->first();
         $sciencefiction = Category::where('name', 'Science Fiction')->first();
         $romance = Category::where('name', 'Romance')->first();
@@ -30,7 +31,7 @@ class BookSeeder extends Seeder
         $categories = [
             'Fiction' => $fiction,
             'Thriller' => $thriller,
-            'Non Fiction' => $nonfiction,
+            'Non-Fiction' => $nonfiction,
             'Fantasy' => $category,
             'Science Fiction' => $sciencefiction,
             'Romance' => $romance,
@@ -216,112 +217,112 @@ class BookSeeder extends Seeder
                     'author' => 'Bill Bryson',
                     'description' => 'An accessible journey through science, explaining how we got from the Big Bang to now.',
                     'image' => 'nonfiction (1).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
                 [
                     'title' => 'Man\'s Search for Meaning',
                     'author' => 'Viktor E. Frankl',
                     'description' => 'A Holocaust survivor’s reflections on finding purpose in life, even in the darkest times.',
                     'image' => 'nonfiction (2).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
                 [
                     'title' => 'The Devil in the White City',
                     'author' => 'Erik Larson',
                     'description' => 'A gripping tale of murder, magic, and madness at the 1893 Chicago World\'s Fair.',
                     'image' => 'nonfiction (3).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
                 [
                     'title' => 'The Immortal Life of Henrietta Lacks',
                     'author' => 'Rebecca Skloot',
                     'description' => 'The story of the woman whose cells changed medical history.',
                     'image' => 'nonfiction (4).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
                 [
                     'title' => 'We Should All Be Feminists',
                     'author' => 'Chimamanda Ngozi Adichie',
                     'description' => 'A personal and powerful essay on feminism in the 21st century.',
                     'image' => 'nonfiction (5).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
                 [
                     'title' => 'Sapiens: A Brief History of Humankind',
                     'author' => 'Yuval Noah Harari',
                     'description' => 'A compelling exploration of the history and impact of Homo sapiens.',
                     'image' => 'nonfiction (6).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
                 [
                     'title' => 'The Subtle Art of Not Giving a F*ck',
                     'author' => 'Mark Manson',
                     'description' => 'A counterintuitive approach to living a good life.',
                     'image' => 'nonfiction (7).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
                 [
                     'title' => 'Educated',
                     'author' => 'Tara Westover',
                     'description' => 'A memoir about a woman who grows up in a strict and abusive household in rural Idaho but eventually escapes to learn about the wider world through education.',
                     'image' => 'nonfiction (8).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
                 [
                     'title' => 'Atomic Habits',
                     'author' => 'James Clear',
                     'description' => 'Practical strategies to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.',
                     'image' => 'nonfiction (9).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
                 [
                     'title' => 'Untamed',
                     'author' => 'Glennon Doyle',
                     'description' => 'A memoir and rallying cry for women to trust themselves and break free from societal expectations.',
                     'image' => 'nonfiction (10).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
                 [
                     'title' => 'Think Again',
                     'author' => 'Adam Grant',
                     'description' => 'A guide to rethinking and unlearning, teaching us to embrace being wrong and to grow.',
                     'image' => 'nonfiction (11).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
                 [
                     'title' => 'The Wager',
                     'author' => 'David Grann',
                     'description' => 'A thrilling tale of shipwreck, mutiny, and murder on the high seas.',
                     'image' => 'nonfiction (12).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
                 [
                     'title' => 'Second Life: Having a Child in the Digital Age',
                     'author' => 'Amanda Hess',
                     'description' => 'A modern look at parenting, technology, and identity in a connected world.',
                     'image' => 'nonfiction (13).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
                 [
                     'title' => 'Spitfires: The American Women Who Flew in World War II',
                     'author' => 'Penny Airman',
                     'description' => 'The courageous story of female pilots in WWII.',
                     'image' => 'nonfiction (14).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
                 [
                     'title' => 'Mark Twain',
                     'author' => 'Ron Chernow',
                     'description' => 'An in-depth biography of the iconic American author and humorist.',
                     'image' => 'nonfiction (15).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
                 [
                     'title' => 'My Next Breath: A Memoir',
                     'author' => 'Jeremy Renner',
                     'description' => 'A memoir chronicling personal challenges and triumphs.',
                     'image' => 'nonfiction (16).jpg',
-                    'categories' => ['NonFiction'],
+                    'categories' => ['Non-Fiction'],
                 ],
             ],
             [
