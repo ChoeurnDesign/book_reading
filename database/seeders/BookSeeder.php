@@ -30,9 +30,9 @@ class BookSeeder extends Seeder
         $categories = [
             'Fiction' => $fiction,
             'Thriller' => $thriller,
-            'Nonfiction' => $nonfiction,
+            'Non Fiction' => $nonfiction,
             'Fantasy' => $category,
-            'Sciencefiction' => $sciencefiction,
+            'Science Fiction' => $sciencefiction,
             'Romance' => $romance,
         ];
 
