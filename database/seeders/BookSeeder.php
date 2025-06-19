@@ -13,8 +13,9 @@ class BookSeeder extends Seeder
     public function run(): void
     {
          // Truncate pivot table and books
-        DB::table('book_categories')->truncate();
-        Book::truncate();
+        DB::table('book_categories')->truncate(); // Pivot table (from earlier)
+        DB::table('chapters')->truncate();        // Truncate chapters first
+        Book::truncate();  
         
         // Ensure categories exist before attaching them to books
         $fiction = Category::where('name', 'Fiction')->first();
