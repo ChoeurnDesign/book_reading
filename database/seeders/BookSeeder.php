@@ -6,11 +6,16 @@ use Illuminate\Database\Seeder;
 use App\Models\Book;
 use App\Models\Category;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 
 class BookSeeder extends Seeder
 {
     public function run(): void
     {
+         // Truncate pivot table and books
+        DB::table('book_category')->truncate();
+        Book::truncate();
+        
         // Ensure categories exist before attaching them to books
         $fiction = Category::where('name', 'Fiction')->first();
         $thriller = Category::where('name', 'Thriller')->first();
