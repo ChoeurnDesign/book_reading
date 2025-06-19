@@ -12,13 +12,13 @@ class BookSeeder extends Seeder
 {
     public function run(): void
     {
-         // Truncate pivot table and books
+        // Truncate pivot table and books
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         DB::table('book_categories')->truncate();
         DB::table('chapters')->truncate();
         Book::truncate();
-        DB::statement('SET FOREIGN_KEY_CHECKS=1;'); 
-        
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
         // Ensure categories exist before attaching them to books
         $fiction = Category::where('name', 'Fiction')->first();
         $thriller = Category::where('name', 'Thriller')->first();
@@ -39,7 +39,7 @@ class BookSeeder extends Seeder
 
         // Array of books to seed
 
-        $books = [
+        $books = array_merge(
             [
                 'title' => 'The Kite Runner',
                 'author' => 'Khaled Hosseini',
@@ -208,9 +208,7 @@ class BookSeeder extends Seeder
                 'image' => 'fiction (24).jpg',
                 'categories' => ['Fiction'],
             ],
-        ];
 
-        $books = [
             [
                 'title' => 'A Short History of Nearly Everything',
                 'author' => 'Bill Bryson',
@@ -323,9 +321,7 @@ class BookSeeder extends Seeder
                 'image' => 'nonfiction (16).jpg',
                 'categories' => ['Nonfiction'],
             ],
-        ];
 
-        $books = [
             [
                 'title' => 'Brave New World',
                 'author' => 'Aldous Huxley',
@@ -438,9 +434,7 @@ class BookSeeder extends Seeder
                 'image' => 'sciencefiction (16).jpg',
                 'categories' => ['Sciencefiction'],
             ],
-        ];
 
-        $books = [
             [
                 'title' => 'Harry Potter and the Prisoner of Azkaban',
                 'author' => 'J.K. Rowling',
@@ -539,9 +533,7 @@ class BookSeeder extends Seeder
                 'image' => 'fantasy (14).jpg',
                 'categories' => ['Fantasy'],
             ],
-        ];
 
-        $books = [
             [
                 'title' => 'Angels & Demons',
                 'author' => 'Dan Brown',
@@ -654,9 +646,7 @@ class BookSeeder extends Seeder
                 'image' => 'thriller (16).jpg',
                 'categories' => ['Thriller'],
             ],
-        ];
 
-        $books = [
             [
                 'title' => 'The Hating Game',
                 'author' => 'Sally Thorne',
@@ -768,8 +758,7 @@ class BookSeeder extends Seeder
                 'description' => 'A love story about hope, healing, and the power of second chances.',
                 'image' => 'romance (16).jpg',
                 'categories' => ['Romance'],
-            ],
-        ];
+            ]);
 
         foreach ($books as $bookData) {
             // Ensure unique slug
