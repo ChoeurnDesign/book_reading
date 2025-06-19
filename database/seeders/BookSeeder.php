@@ -11,6 +11,9 @@ class BookSeeder extends Seeder
 {
     public function run(): void
     {
+        DB::table('book_category')->truncate();
+        Book::truncate();
+        
         // Ensure 'Romance' category exists
         $romance = Category::where('name', 'Romance')->first();
 
