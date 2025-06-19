@@ -13,7 +13,7 @@ class BookSeeder extends Seeder
     public function run(): void
     {
          // Truncate pivot table and books
-        DB::table('book_category')->truncate();
+        DB::table('book_categories')->truncate();
         Book::truncate();
         
         // Ensure categories exist before attaching them to books
