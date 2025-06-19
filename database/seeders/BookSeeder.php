@@ -22,9 +22,9 @@ class BookSeeder extends Seeder
         // Ensure categories exist before attaching them to books
         $fiction = Category::where('name', 'Fiction')->first();
         $thriller = Category::where('name', 'Thriller')->first();
-        $nonfiction = Category::where('name', 'Nonfiction')->first();
+        $nonfiction = Category::where('name', 'Non Fiction')->first();
         $category = Category::where('name', 'Fantasy')->first();
-        $sciencefiction = Category::where('name', 'Sciencefiction')->first();
+        $sciencefiction = Category::where('name', 'Science Fiction')->first();
         $romance = Category::where('name', 'Romance')->first();
 
         $categories = [
