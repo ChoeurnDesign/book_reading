@@ -21,8 +21,8 @@ class CategorySeeder extends Seeder
 
         // Now seed categories
         Category::create([
-            'name' => 'Sciencefiction', // Use "Sciencefiction" for consistency (no space)
-            'slug' => Str::slug('Sciencefiction'),
+            'name' => 'Science Fiction', // Use "Sciencefiction" for consistency (no space)
+            'slug' => Str::slug('Science Fiction'),
             'description' => 'Speculative fiction dealing with imaginative concepts such as futuristic science and technology, space travel, time travel, faster-than-light travel, parallel universes, and extraterrestrial life.',
         ]);
         Category::create([
