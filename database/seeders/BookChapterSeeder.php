@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+// use Illuminate\Support\Facades\DB;
 use App\Models\Book;
 use App\Models\Chapter;
 
@@ -12,7 +12,7 @@ class BookChapterSeeder extends Seeder
     public function run(): void
     {
         // Drop old data
-        DB::table('chapters')->truncate();
+        // DB::table('chapters')->truncate();
 
         // Organized by category: Fantasy, Thriller, Romance
         $booksByCategory = [
