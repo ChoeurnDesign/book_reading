@@ -10,23 +10,21 @@ class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        // Create Admin user only if not exists
-        User::firstOrCreate(
+        User::updateOrCreate(
             ['email' => 'chunchoeurn99@gmail.com'],
             [
                 'name' => 'Choeurn',
                 'password' => Hash::make('Choeurn123'),
-                'role' => 'admin', // Only if your users table has a 'role' column
+                'role' => 'admin',
             ]
         );
-
-        // Create normal User only if not exists
-        User::firstOrCreate(
+        
+        User::updateOrCreate(
             ['email' => 'user@gmail.com'],
             [
                 'name' => 'User',
                 'password' => Hash::make('User12345'),
-                'role' => 'user', // Only if your users table has a 'role' column
+                'role' => 'user',
             ]
         );
     }
