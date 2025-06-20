@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             CategorySeeder::class, // Ensure categories are seeded first
             BookSeeder::class,     // Then seed your books and attach categories
-            UserSeederr::class,
+            // UserSeederr::class,
             // Add other seeders here as you create them, e.g., ReviewSeeder::class, etc.
         ]);
     }
