@@ -11,15 +11,13 @@ class CategorySeeder extends Seeder
 {
     public function run(): void
     {
-        // Disable foreign key checks to allow truncation if there are relationships.
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         Category::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-        // Now seed categories
         Category::create([
-            'name' => 'Sciencefiction',
-            'slug' => Str::slug('Science-fiction'),
+            'name' => 'Science Fiction',
+            'slug' => Str::slug('Science Fiction'), // "science-fiction"
             'description' => 'Speculative fiction dealing with imaginative concepts such as futuristic science and technology, space travel, time travel, faster-than-light travel, parallel universes, and extraterrestrial life.',
         ]);
         Category::create([
