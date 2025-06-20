@@ -23,15 +23,10 @@ class BookSeeder extends Seeder
         // Ensure categories exist before attaching them to books
         $thriller = Category::where('name', 'Thriller')->first();
         $category = Category::where('name', 'Fantasy')->first();
-        $sciencefiction = Category::where('name', 'Science Fiction')->first();
+        $sciencefiction = Category::where('name', 'Sciencefiction')->first();
         $romance = Category::where('name', 'Romance')->first();
 
-        $categories = [
-            'Thriller' => $thriller,
-            'Fantasy' => $category,
-            'Science Fiction' => $sciencefiction,
-            'Romance' => $romance,
-        ];
+        $categories = Category::all()->keyBy('name'); 
 
 
         // Array of books to seed
@@ -43,112 +38,112 @@ class BookSeeder extends Seeder
                     'author' => 'Aldous Huxley',
                     'description' => 'A dystopian future where technology and genetic engineering shape society.',
                     'image' => 'sciencefiction (1).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
                 [
                     'title' => 'Light Bringer',
                     'author' => 'Pierce Brown',
                     'description' => 'An epic space opera of rebellion and hope in a divided galaxy.',
                     'image' => 'sciencefiction (2).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
                 [
                     'title' => 'Project Hail Mary',
                     'author' => 'Andy Weir',
                     'description' => 'A lone astronaut races to save humanity from extinction.',
                     'image' => 'sciencefiction (3).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
                 [
                     'title' => 'Mickey7',
                     'author' => 'Edward Ashton',
                     'description' => 'A disposable crew member on a distant planet faces impossible odds and identity.',
                     'image' => 'sciencefiction (4).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
                 [
                     'title' => 'Sea of Tranquility',
                     'author' => 'Emily St. John Mandel',
                     'description' => 'A beautifully woven tale of time travel and humanity across centuries.',
                     'image' => 'sciencefiction (5).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
                 [
                     'title' => 'Harmattan Season',
                     'author' => 'Tochi Onyebuchi',
                     'description' => 'A speculative narrative exploring climate, migration, and survival.',
                     'image' => 'sciencefiction (6).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
                 [
                     'title' => 'Sky Daddy',
                     'author' => 'Kate Folk',
                     'description' => 'A surreal flight into the absurd and the unknown.',
                     'image' => 'sciencefiction (7).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
                 [
                     'title' => 'Overgrowth',
                     'author' => 'Mira Grant',
                     'description' => 'A bio-thriller where nature takes an unexpected and deadly turn.',
                     'image' => 'sciencefiction (8).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
                 [
                     'title' => 'Awake in the Floating City',
                     'author' => 'Susanna Kwan',
                     'description' => 'A mesmerizing journey through a city suspended above the clouds.',
                     'image' => 'sciencefiction (9).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
                 [
                     'title' => 'Esperance',
                     'author' => 'Adam Oyebanji',
                     'description' => 'A gripping space adventure with themes of hope and survival.',
                     'image' => 'sciencefiction (10).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
                 [
                     'title' => 'It Takes a Psychic',
                     'author' => 'Jayne Ann Krentz',
                     'description' => 'A blend of psychic abilities and futuristic intrigue.',
                     'image' => 'sciencefiction (11).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
                 [
                     'title' => 'The Book of Records',
                     'author' => 'Madeleine Thien',
                     'description' => 'A speculative meditation on memory, time, and identity.',
                     'image' => 'sciencefiction (12).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
                 [
                     'title' => 'The Memory Collectors',
                     'author' => 'Dete Meserve',
                     'description' => 'A mysterious tale where memories hold the key to the future.',
                     'image' => 'sciencefiction (13).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
                 [
                     'title' => 'Dark Dawn',
                     'author' => 'Seth Ring',
                     'description' => 'A thrilling odyssey through space as darkness rises.',
                     'image' => 'sciencefiction (14).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
                 [
                     'title' => 'All Superheroes Need PR',
                     'author' => 'Elizabeth Stephens',
                     'description' => 'A witty and imaginative story where superheroes navigate fame.',
                     'image' => 'sciencefiction (15).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
                 [
                     'title' => 'He Who Fights with Monsters',
                     'author' => 'Shirtaloon',
                     'description' => 'A saga of transformation and adventure in parallel worlds.',
                     'image' => 'sciencefiction (16).jpg',
-                    'categories' => ['Science-Fiction'],
+                    'categories' => ['Science-fiction'],
                 ],
             ],
             [
@@ -482,7 +477,6 @@ class BookSeeder extends Seeder
         );
 
         foreach ($books as $bookData) {
-            // Ensure unique slug
             $baseSlug = Str::slug($bookData['title']);
             $slug = $baseSlug;
             $counter = 1;
