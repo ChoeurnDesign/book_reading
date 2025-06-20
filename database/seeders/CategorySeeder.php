@@ -16,11 +16,6 @@ class CategorySeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         Category::create([
-            'name' => 'Science Fiction',
-            'slug' => Str::slug('Science Fiction'), // "science-fiction"
-            'description' => 'Speculative fiction dealing with imaginative concepts such as futuristic science and technology, space travel, time travel, faster-than-light travel, parallel universes, and extraterrestrial life.',
-        ]);
-        Category::create([
             'name' => 'Fantasy',
             'slug' => Str::slug('Fantasy'),
             'description' => 'Genre of speculative fiction set in a fictional universe, often inspired by real-world myth and folklore.',
