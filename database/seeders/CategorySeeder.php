@@ -9,9 +9,6 @@ use Illuminate\Support\Facades\DB;
 
 class CategorySeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         // Disable foreign key checks to allow truncation if there are relationships.
@@ -21,7 +18,7 @@ class CategorySeeder extends Seeder
 
         // Now seed categories
         Category::create([
-            'name' => ['Science Fiction'], // Use "Sciencefiction" for consistency (no space)
+            'name' => 'Science Fiction', // <-- Fixed: now a string
             'slug' => Str::slug('Science Fiction'),
             'description' => 'Speculative fiction dealing with imaginative concepts such as futuristic science and technology, space travel, time travel, faster-than-light travel, parallel universes, and extraterrestrial life.',
         ]);
