@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
         // Create normal User
         User::create([
             'name' => 'User',
-            'email' => 'user@example.com',
+            'email' => 'user@gmail.com',
             'password' => Hash::make('User12345'),
             'role' => 'user', // Only if your users table has a 'role' column
         ]);
